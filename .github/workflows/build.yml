@@ -11,5 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker build . -t alansugito/githubactionspractice
-      - run: echo "${{ secrets.DOCKERHUB_PW }}" | docker login -u ${{ secrets.DOCKERHUB_USER}} -password-stdin
+      - run: echo "${{ secrets.DOCKERHUB_PW }}" | docker login -u ${{ secrets.DOCKERHUB_USER}} --password-stdin
       - run: docker push alansugito/githubactionspractice
