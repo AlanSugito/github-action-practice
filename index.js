@@ -1,7 +1,9 @@
-const express = require("express")
+const express = require('express');
 
-const app = express()
+const app = express();
 
-const PORT = process.env.PORT || 4000
+app.get('/', (_, res) => res.send('Hello Github Actions'));
 
-app.listen(PORT, () => console.log("Server listening at port: " + PORT)) 
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => console.log('Server listening at port: ' + PORT));
